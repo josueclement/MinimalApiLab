@@ -2,4 +2,4 @@
 
 namespace CustomerRepo;
 
-public record Customer(string Id, string Name);
+public record Customer(Guid Id, string Name);

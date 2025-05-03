@@ -6,8 +6,8 @@ namespace CustomerRepo;
 public interface ICustomerRepository
 {
     IEnumerable<Customer> GetAll();
-    Customer? GetById(string id);
+    Customer? GetById(Guid id);
     void Create(Customer customer);
     void Update(Customer customer);
-    void Delete(string id);
+    void Delete(Guid id);
 }
