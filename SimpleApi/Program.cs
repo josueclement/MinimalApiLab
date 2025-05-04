@@ -33,9 +33,8 @@ app.MapPut("/customers/{id}", (ICustomerRepository repository, Guid id, Customer
 {
     var customer = repository.GetById(id);
     if (customer is null)
-    {
         return Results.NotFound();
-    }
+    
     repository.Update(updatedCustomer);
     return Results.Ok(updatedCustomer);
 });
